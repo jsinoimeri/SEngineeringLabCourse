@@ -8,7 +8,6 @@
       <th>Commenttext</th>
       <th>Author</th>
       <th>Blogpost</th>
-      <th>Blogpost</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +15,9 @@
   <tbody>
     <% @comments.each do |comment| %>
       <tr>
-        <td><%= comment.commenttext %></td>
+        <td><%= comment.commentText %></td>
         <td><%= comment.author %></td>
         <td><%= comment.blogpost_id %></td>
-        <td><%= comment.blogpost %></td>
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
