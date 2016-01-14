@@ -55,5 +55,6 @@ Rails.application.routes.draw do
   #   end
   
   resources :blogposts
-  root 'application#hello'
+  root 'users#index'
+  get 'hello' => 'application#hello'
 end
