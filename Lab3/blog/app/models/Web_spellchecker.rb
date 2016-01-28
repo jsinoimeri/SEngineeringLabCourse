@@ -2,7 +2,10 @@ class Web_Spellchecker < Spellchecker
 	def initialize()
 	end
 	
-	def known(word_list)
-		DictionaryWord.where('words in(:word_list)', list: word_list).order(count :word_list).pluck(:word_list)
+	def known(words)
+		DictionaryWord.where('word in(:words)', words: words)
+		.order(count: :'desc')
+		.pluck(:word)
 	end
+	
 end

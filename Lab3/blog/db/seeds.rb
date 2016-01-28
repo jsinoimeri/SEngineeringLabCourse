@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+spellchecker = Spellchecker.new Rails.root.join('db', 'brown_sample.txt')
+DictionaryWord.transaction do
+	spellchecker.dictionary.each do |word, count|
+		DictionaryWord.create word: word, count: count
+	end
+end
