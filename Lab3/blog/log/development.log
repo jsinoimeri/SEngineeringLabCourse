@@ -300,3 +300,69 @@ Started GET "/assets/dictionary_words.js?body=1" for 127.0.0.1 at 2016-01-28 11:
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-28 11:11:06 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-28 12:02:41 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BlogpostsController#index as HTML
+  [1m[35mBlogpost Load (0.1ms)[0m  SELECT "blogposts".* FROM "blogposts"
+  Rendered blogposts/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 79ms (Views: 68.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/blogposts.css?body=1" for 127.0.0.1 at 2016-01-28 12:02:41 -0500
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2016-01-28 12:02:41 -0500
+
+
+Started GET "/assets/dictionary_words.css?body=1" for 127.0.0.1 at 2016-01-28 12:02:41 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-28 12:02:41 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-01-28 12:02:41 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-28 12:02:41 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-28 12:02:41 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-01-28 12:02:41 -0500
+
+
+Started GET "/assets/blogposts.js?body=1" for 127.0.0.1 at 2016-01-28 12:02:41 -0500
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2016-01-28 12:02:41 -0500
+
+
+Started GET "/assets/dictionary_words.js?body=1" for 127.0.0.1 at 2016-01-28 12:02:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-28 12:02:41 -0500
+
+
+Started GET "/spellcheck/apple" for 127.0.0.1 at 2016-01-28 12:02:57 -0500
+
+LoadError (cannot load such file -- /home/jeton/Documents/Sysc4806/SEngineeringLabCourse/Lab3/blog/app/models/web_spellchecker.rb):
+  app/controllers/dictionary_words_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/jeton/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/jeton/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/jeton/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/jeton/.rvm/gems/ruby-2.3.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/spellcheck/apple" for 127.0.0.1 at 2016-01-28 12:03:12 -0500
+Processing by DictionaryWordsController#spellcheck as HTML
+  Parameters: {"term"=>"apple"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "dictionary_words" ("count", "created_at", "updated_at", "word") VALUES (?, ?, ?, ?)  [["count", 3], ["created_at", "2016-01-28 17:29:39.365910"], ["updated_at", "2016-01-28 17:29:39.365910"], ["word", "hello"]]
+  [1m[36m (133.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mDictionaryWord Load (101.1ms)[0m  SELECT "dictionary_words".* FROM "dictionary_words"
